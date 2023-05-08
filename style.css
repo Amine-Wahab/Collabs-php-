@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Emoji:wght@300&display=swap%27');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #e1e1e1;
+}
+
+.grid-container {
+
+    display: grid;
+    grid-template-areas: "sidebar-left center sidebar-right";
+    grid-template-columns: repeat(3,1fr);
+    height: 100vh;
+
+}
+
+form.form {
+    background-color: #1e1e1e;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+   }
+
+input[type="text"] {
+    height: 40px;
+    width: 200px;
+    border: 1px solid #337ab7;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.tweet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+button[type="submit"] {
+    background-color: #183b5a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #07121b;
+}
+
+nav {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 20px;
+    grid-column: 1;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column; /* Afficher les éléments de la liste en colonne */
+    justify-content: center;
+    
+}
+
+nav ul li {
+    margin: 10px 0; /* Ajouter une marge verticale */
+}
+
+nav ul li a {
+    font-family: 'Segoe UI';
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease-in-out;
+    position: relative; 
+    padding: 4px 2px;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 100%;
+    height: 100%;
+    background-color: #77777759;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out; 
+    border-radius: 12px;
+}
+
+nav ul li a:hover::after {
+    opacity: 1; 
+}
+
